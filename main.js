@@ -3,7 +3,32 @@ class SingleChart{
     //
     constructor(type,size){
 
-        this.colors = [];
+        this.colors = [
+            {
+                backgroundColor:'rgba(255, 99, 132, 0.2)',
+                borderColor:'rgba(255, 99, 132, 0.2)'
+            },
+            {
+                backgroundColor:'rgba(132, 99, 255, 0.2)',
+                borderColor:'rgba(132, 99, 255, 0.2)'
+            },
+            {
+                backgroundColor:'rgba(255, 99, 132, 0.2)',
+                borderColor:'rgba(255, 99, 132, 0.2)'
+            },
+            {
+                backgroundColor:'rgba(255, 99, 132, 0.2)',
+                borderColor:'rgba(255, 99, 132, 0.2)'
+            },
+            {
+                backgroundColor:'rgba(255, 99, 132, 0.2)',
+                borderColor:'rgba(255, 99, 132, 0.2)'
+            },
+            {
+                backgroundColor:'rgba(255, 99, 132, 0.2)',
+                borderColor:'rgba(255, 99, 132, 0.2)'
+            }
+        ];
 
         this.type = type;
         this.size = size;
@@ -61,8 +86,8 @@ class SingleChart{
 
                 label: labels[i],
                 data:[],
-                backgroundColor:'rgba(255, 99, 132, 0.2)',
-                borderColor:'rgba(255, 99, 132, 0.2)',
+                backgroundColor:this.colors[i].backgroundColor,
+                borderColor:this.colors[i].borderColor,
                 borderWidth: 1
 
 
