@@ -22,7 +22,7 @@ class SingleChart{
 
         this.ctx = document.getElementById(divId).getContext('2d');
         this.chart = new Chart(this.ctx, {
-            type: 'bar',
+            type: this.type,
             data: this.data,
             options: {
                 scales: {
@@ -99,6 +99,22 @@ class SingleChart{
 
     }
 
+    unshift(node){
+
+        //
+        this.data.labels.unshift(node.label);
+
+        //
+        for (let i = 0; i < this.size; i++) {
+
+            this.data.datasets[i].data.unshift(node.values[i]);
+            
+        }
+
+        this.chart.update();
+
+    }
+
     //
     pop(){
 
@@ -142,6 +158,6 @@ let node={
 
 }
 
-singleChart.push(node);
-
-console.log(singleChart.pop());
+//singleChart.push(node);
+//console.log(singleChart.pop());
+//singleChart.unshift(node);
