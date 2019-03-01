@@ -13,12 +13,5 @@ let node={
 
 }
 
-singleChart.push(node);
-singleChart.push(node);
-singleChart.push(node);
-singleChart.push(node);
-singleChart.push(node);
-singleChart.push(node);
-
 //console.log(singleChart.pop());
 //singleChart.unshift(node);
